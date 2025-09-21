@@ -26,8 +26,8 @@ class Movie(models.Model):
 
 
 class Sans(models.Model):
-    movie = models.ForeignKey('Movie', on_delete=models.CASCADE)
-    cinema = models.ForeignKey('Cinema', on_delete=models.CASCADE)
+    movie = models.ForeignKey(to='Movie', on_delete=models.CASCADE)
+    cinema = models.ForeignKey(to='Cinema', on_delete=models.CASCADE)
     play_at = models.DateTimeField()
 
 
