@@ -1,0 +1,688 @@
+{
+	"info": {
+		"_postman_id": "a70b406e-a8a0-42ab-8f8e-7751b3fc580b",
+		"name": "CinemaTicket",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48560792",
+		"_collection_link": "https://raminhr-work-4848007.postman.co/workspace/Ramin-Hr's-Workspace~00ed1e82-e4e5-41ac-86c5-b5e36c9eff16/collection/48560792-a70b406e-a8a0-42ab-8f8e-7751b3fc580b?action=share&source=collection_link&creator=48560792"
+	},
+	"item": [
+		{
+			"name": "/ticket/cinema-list-create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/cinema-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"cinema-list-create"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/cinema-list-create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/cinema-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"cinema-list-create"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/cinema-retrieve-update-destroy/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/cinema-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"cinema-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/movie-list-create",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/movie-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"movie-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/movie-retrieve-update-destroy/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/movie-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"movie-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/sans-list-create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/sans-retrieve-update-destroy",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"sans-retrieve-update-destroy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/sans-retrieve-update-destroy/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/sans-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"sans-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/list-create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/retrieve-update-destroy/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/actor-list-create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/actor-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"actor-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/actor-retrieve-update-destroy/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/actor-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"actor-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/comment-list-create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/comment-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"comment-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/comment-retrieve-update-destroy/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzA4MjEyLCJpYXQiOjE3NTkyMjE4MTIsImp0aSI6IjM0NDg4MmU1OWI2NjQ0ZDg5YzFmMTFiMDYwYzg3NDU1IiwidXNlcl9pZCI6IjEifQ.Fe1mosN9D1AugQkIA7RIn_OVTnvagyVaB8EgtI2N2-A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/comment-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"comment-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/genre-list-create",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/genre-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"genre-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/genre-retrieve-update-destroy/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/genre-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"genre-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/criticism-list-create",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/criticism-list-create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"criticism-list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ticket/criticism-retrieve-update-destroy/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5MzAxNjc5LCJpYXQiOjE3NTkyMTUyNzksImp0aSI6ImY2YTJmN2E4MDFmMTQzZTFiODlhZTEyMDA3MzY1NzlhIiwidXNlcl9pZCI6IjEifQ.eUGWPc0WqmLJ9AKR03-I2N4O_0o0RwZzY7u3ftQ2nrY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/ticket/criticism-retrieve-update-destroy/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"ticket",
+						"criticism-retrieve-update-destroy",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
